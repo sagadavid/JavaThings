@@ -40,6 +40,42 @@ public class Loopso extends MethodSharer{
 //            methodSharer.display(arrayList.get());
 //            display index 0 to 2???
 //        }
+        // WHILE LOOP SAMPLES
+        System.out.println("****");
+        int z = 5;
+        while (z > 1) {
+            z = z - 1;
+            if (z < 3) {
+                System.out.println("small z");
+            }
+        }
+        System.out.println("****");
+//        WHILE LOOP
+        int y = 1;
+        while (y < 10) {
+            y = y + 1;
+            System.out.println("big y");
+        }
+        System.out.println("****");
+//        WHILE LOOP
+        int xm = 3;
+        while (xm > 0) {
+            if (xm > 2) {
+                System.out.print("a");
+            }
+            xm = xm - 1;
+            System.out.print("-");
+            if (xm == 2) {
+                System.out.print("b c");
+            }
+            xm = xm - 1;
+            System.out.print("-");
+            if (xm == 1) {
+                System.out.print("d");
+            }
+            xm = xm - 1;
+        }
+        System.out.println("*****");
     }
 }
 

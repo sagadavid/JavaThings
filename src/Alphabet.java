@@ -8,10 +8,9 @@ class Alphabet {
         System.out.println();
         System.out.print("Greek alphabet: ");
         for (int i = 913; i <= 937; i++) {
-            System.out.print((char) i);//int gets char value here by type-casting
+            System.out.print((char) i);//int gets char value here by type-casting-WOW!!!
         }
         System.out.println();
-
+        }
     }
 
-}

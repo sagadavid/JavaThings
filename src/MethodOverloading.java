@@ -18,7 +18,6 @@ public class MethodOverloading {
         return propagation;
     }
 
-
     //        java: non-static method propogateGivenNumber(double,double)
 //        cannot be referenced from a static context
     public static void main(String[] args) {

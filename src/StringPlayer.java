@@ -1,7 +1,7 @@
 class StringPlayer {
     public static void main(String[] args) {
 
-//        reverse("canobalisit");
+// reverse("canobalisit");
         var str = "honalulu";
         System.out.println(str.indexOf('u',2));
         System.out.println(str.substring(4));

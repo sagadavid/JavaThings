@@ -8,7 +8,7 @@ public class Main2FourModules {
             finished = true;
         }
 //modul4
-        Biblio vagsbygd = new Biblio();
+        LibraryApp vagsbygd = new LibraryApp();
         vagsbygd.addBook("hello new book");
         vagsbygd.checkNReport();
 
@@ -16,7 +16,7 @@ public class Main2FourModules {
         Secretary Elisa = new Secretary();
         Elisa.urgentCall();
         Elisa.ringLastCall();
-        BrannMan Henrik = new BrannMan();
+        BrannMann Henrik = new BrannMann();
         Henrik.ringBrannMan();
 //modul 7???
         Budget myBudget = new Budget();

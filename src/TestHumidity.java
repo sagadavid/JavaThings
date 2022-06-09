@@ -9,6 +9,8 @@ public class TestHumidity {
 
     public static void main(String[] args) {
         TestHumidity california = new TestHumidity();
-        california.getHumidity(2,2);
+//       var result= california.getHumidity(2,2);
+//        System.out.println(result);
+//        System.out.println(california.getHumidity(3,3));
     }
 }
