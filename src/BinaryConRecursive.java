@@ -1,14 +1,19 @@
+import java.text.NumberFormat;
+
 public class BinaryConRecursive {
-    public static void binarian (int given)
-    {
-        if (given>0)
-        {
-            binarian(given/2);
-            System.out.println(given%2);
+    public static int binarian (int given) {
+        byte realBi = 0;
+        if (given > 0) {
+            binarian(given / 2);
+//          System.out.print(given%2);
+            int bi = given % 2;
+            realBi = (byte) bi;
         }
+        System.out.print(realBi);
+        return realBi;
     }
 
     public static void main(String[] args) {
-        binarian(456);
+        binarian(BottleCount.antall);
     }
 }

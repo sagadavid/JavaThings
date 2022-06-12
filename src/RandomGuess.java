@@ -21,14 +21,22 @@ public class RandomGuess {
     private Random oracle;
     private Integer consoleGuess;
     private String userGuess;
-    private Scanner console;
+    private Scanner scanner;
 
     public RandomGuess() {//constructors
-        console = new Scanner(System.in);
+        scanner = new Scanner(System.in);
         logMap = new HashMap<>();
         oracle = new Random();
         consoleGuess = oracleGuessing();
         userGuess = userInteraction();
+    }
+
+    public static void main(String[] args) {
+        RandomGuess guess = new RandomGuess();
+        guess.turnTheWheel();
+//        guess.logMap();
+//        guess.userInteraction();
+//        guess.consoleResponse();
     }
 
     /**
@@ -44,7 +52,7 @@ public class RandomGuess {
      * @method using scanner package
      */
     public String userInteraction() {
-        String inputLine = console.nextLine().trim().toLowerCase();
+        String inputLine = scanner.nextLine().trim().toLowerCase();
         userGuess = inputLine;
         return userGuess;
     }
@@ -63,6 +71,7 @@ public class RandomGuess {
         while (!finished) {
             if (userGuess.contains("exit")) {
                 finished = true;
+//                scanner.close();
                 System.out.println("got it .. bye bye");
             }
             oracleGuessing();
@@ -87,16 +96,7 @@ public class RandomGuess {
         System.out.println("type your guess..");
         System.out.println("or say exit");
         System.out.print("-->" +
-                " ");
-    }
-
-    public static void main(String[] args) {
-        RandomGuess guess = new RandomGuess();
-        guess.turnTheWheel();
-        guess.logMap();
-        guess.userInteraction();
-        guess.consoleResponse();
+                         " ");
     }
 }
-
 
