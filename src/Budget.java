@@ -15,4 +15,10 @@ public class Budget {
             System.out.println("you need some more income");
         }
     }
+
+    public static void main(String[] args)
+    {
+        Budget myBudget = new Budget();
+        myBudget.erJegGod(45, 56);
+    }
 }

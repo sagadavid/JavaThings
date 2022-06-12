@@ -1,6 +1,38 @@
 public class Stringos {
     public static void main(String[] args) {
-/*
+
+String s1 = "Hello!";
+        var s2 = "Hello!";
+//INTERNING.. JAVA PLACES SAME LOCATION, so they match
+        if (s1 == s2) {
+            System.out.println("they match!");
+        } else {
+            System.out.println("they don't match!");
+        }
+//NEW CREATION, NEW LOCATION.. so == says theydont match
+        String s3 = new String("Hello!");
+        String s4 = new String("Hello!");
+        if (s3 == s4) {
+            System.out.println("they match!");
+        } else {
+            System.out.println("they don't match!");
+        }
+
+//  PROPER EQUALS CHECK FOR STRING
+        if (s3.equals(s4)) {
+            System.out.println("they do match!");
+        } else {
+            System.out.println("they don't match!");
+        }
+
+// EQUALS IGNORE
+        var s5 = "HELLO!";
+        if (s3.equalsIgnoreCase(s5)) {
+            System.out.println("they match, ignored!");
+        } else {
+            System.out.println("they don't match!");
+        }
+
 //STRING MATCH
 String a = "fad";
         String b ="fad";
@@ -91,7 +123,7 @@ String a = "fad";
                     ? "you pass"
                     :"you fail";
             System.out.println(pass);
- */
+
 //  STRING BUILDER
             var anyString = new StringBuilder("starting building a string");
             anyString.append(" just now")
@@ -101,5 +133,40 @@ String a = "fad";
             System.out.println(anyString.toString());
             var builtString = anyString;
             System.out.println(builtString);
+
+
+int sphere = 02;
+        var country = "sweden";
+        var alliance = "eu";
+        var currency = "euro";
+        var season = "sumer";
+        var military = "Nato";
+        var match = "match";
+
+//STRING INTERPOLATION
+        var template = "ulke %s, ittifak %s, døviz %s, " +
+                "mevsim %s, askeri %s, kure %s, match %s, cevabim %s";
+
+//STRING FORMAT AS A DESIGNED OUTPUT
+        var templateFormat = String.format(template, country,
+                alliance, currency, season, military,
+                sphere, match.matches(match),
+                myAnswer);
+        //ulke sweden, ittifak eu, døviz euro,
+        // mevsim sumer, askeri Nato, kure 2, match true, cevabim d
+
+//        sourcecode daki herhangi bir variable a
+//        refereans verilebiliyor, bool ise %s kullanilmiyor
+
+        System.out.println(templateFormat);
+
+// FIND POSITION IN A STRING
+        var welcoming = "welcome to california of usa";
+        System.out.println(welcoming.indexOf("of"));
+
+//        TRIM
+        var city = "stavanger      ";
+        System.out.println(city+" "+city.length());
+        System.out.println(city.trim()+" "+city.trim().length());
     }
 }

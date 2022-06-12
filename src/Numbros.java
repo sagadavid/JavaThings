@@ -1,5 +1,8 @@
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 public class Numbros {
     public static void main(String[] args) {
@@ -32,6 +35,13 @@ public class Numbros {
         System.out.println("unsigne value: " + unsigned);
         var divideUnsigned = unsigned / 2;
         System.out.println("divideUnsigned : " + divideUnsigned);
+
+//bigdecimal unless "" is very big!!!
+        BigDecimal bigDecimaaaaal=new BigDecimal(1234.5678);
+        System.out.println(bigDecimaaaaal);//1234.567800000000033833202905952930450439453125
+        BigDecimal bigDecimuul=new BigDecimal("1234.5678");
+        System.out.println(bigDecimuul);
+        
 
         // BIG DECIMALS, BIG INTIGERS
         double value = .012;
@@ -66,5 +76,32 @@ public class Numbros {
         short short2 = (short) int1;
         System.out.println(short2);
 
+
+        //NUMBERs in a FORMAT... and there is string.format also!!!
+        var someDouble = 123_494_834_859_950.89752;
+        var numberFormat= NumberFormat.getNumberInstance();
+        var intFormat = NumberFormat.getIntegerInstance();
+
+        System.out.println(numberFormat.format(someDouble));//123,494,834,859,950.89
+
+        System.out.println(intFormat.format(someDouble));//123,494,834,859,951
+        intFormat.setGroupingUsed(false);
+        System.out.println(intFormat.format(someDouble));//123494834859951
+
+//   ENABLING LOCALIZED NUMBER SYSTEMS AND GET CURRENCY
+//        1-lokal object created
+        var anyCountry = new Locale("tr","TR");
+//        2-lokalformat object created
+        var anyCountryFormat=NumberFormat.getInstance(anyCountry);
+//        3-lokalformat implemented to someDouble
+        System.out.println(anyCountryFormat.format(someDouble));//123.494.834.859.950,89
+//        4-lokalCurrency object created (for anyCountry)
+       var anyCountryCurrency = NumberFormat.getCurrencyInstance(anyCountry);
+//       5-lokalCurrency implemented to someDouble
+        System.out.println(anyCountryCurrency.format(someDouble));//₺123.494.834.859.950,89
+
+// DECIMAL FORMAT
+ var decimalFormat = new DecimalFormat("NOK.00");
+        System.out.println(decimalFormat.format(1));//NOK1.00
     }
 }

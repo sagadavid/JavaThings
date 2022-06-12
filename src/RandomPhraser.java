@@ -2,13 +2,19 @@ import java.sql.Date;
 import java.util.Random;
 import java.util.Timer;
 
-public class RandomPhraser {
-    static String[] subjects = {"i", "you", "he", "she", "we", "they"};
+public class RandomPhraser
+{
+    // SUBJECTS ARE DESIGNED AS CONSTANTS SO
+    // NO ONE CAN MISSPELL OR CHANGE IT
+    // (OF COURSE IF THEY WOULD HAVE USED PER SE.
+
+    public static final String[] subjects = {"i", "you", "he", "she", "we", "they"};
     static String[] verbs = {"like", "dislike", "go", "drink", "read", "run", "quit"};
     static String[] objects = {"tree", "school", "book", "table", "garden", "house", "room"};
     static Random random = new Random();
-
-    public static void gibberSome() {
+//
+    public static void gibberSome()
+    {
         int gib1len = subjects.length;
         int gib2len = verbs.length;
         int gib3len = objects.length;
@@ -25,7 +31,8 @@ public class RandomPhraser {
         System.out.println(subjects[subRand] + " " + verbs[verbRand] + " " + objects[objRand]);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         gibberSome();
         var mathRandom = Math.random();
         System.out.println(mathRandom);

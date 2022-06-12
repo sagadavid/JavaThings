@@ -117,7 +117,8 @@ class Surveyor extends Survey implements Regulations {
 
 }
 
-class Main {
+class anyClass
+{
     public static void main(String[] args) {
         Surveyor surveyor1 = new Surveyor();
 

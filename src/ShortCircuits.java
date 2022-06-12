@@ -4,63 +4,103 @@ public class ShortCircuits {
         // && || if one side is true, doesnot check other side????
         // & | forces JVM to check both sides
 
-        boolean a = true;
-        boolean b = false;
+        boolean aTrue = 1 == 1;//true
+        boolean aFalse = 1 == 2;//false
 
-        if (a & a) {
-            System.out.println("true & true");
+        if (aTrue & aTrue) {
+            System.out.println("true");//true
+        } else {
+            System.out.println("false");
         }
-        if (a & b) {
-            System.out.println("true & false");
-        }
-        if (b & a) {
-            System.out.println("false & true");
-        }
-        if (b & b) {
-            System.out.println("false & false");
+        if (aTrue & aFalse) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");//false
         }
 
-        System.out.println("****");
-        if (a && a) {
-            System.out.println("true && true");
+        if (aFalse & aTrue) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");//false
         }
-        if (a && b) {
-            System.out.println("true && false");
-        }
-        if (b && a) {
-            System.out.println("false && true");
-        }
-        if (b && b) {
-            System.out.println("false && false");
-        }
-        System.out.println("*****");
-        if (a | a) {
-            System.out.println("true | true");
-        }
-        if (a | b) {
-            System.out.println("true | false");
-        }
-        if (b | a) {
-            System.out.println("false | true");
-        }
-        if (b | b) {
-            System.out.println("false | false");
-        }
-        System.out.println("****");
 
-        if (a || a) {
-            System.out.println("true || true");
+        if (aFalse & aFalse) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");//false
         }
-        if (a || b) {
-            System.out.println("true || false");
+
+        if (aTrue && aTrue) {
+            System.out.println("true");//true
+        } else {
+            System.out.println("false");
         }
-        if (b || a) {
-            System.out.println("false || true");
+
+        if (aTrue && aFalse) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");//false
         }
-        if (b || b) {
-            System.out.println("false || false");
+
+        if (aFalse && aTrue) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");//false
         }
-        System.out.println("******");
+
+        if (aFalse && aFalse) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");//false
+        }
+
+        if (aTrue | aTrue) {
+            System.out.println("true");//true
+        } else {
+            System.out.println("false");
+        }
+
+        if (aTrue | aFalse) {
+            System.out.println("true");//true
+        } else {
+            System.out.println("false");
+        }
+
+        if (aFalse | aTrue) {
+            System.out.println("true");//true
+        } else {
+            System.out.println("false");
+        }
+
+        if (aFalse | aFalse) {
+            System.out.println("true");//false
+        } else {
+            System.out.println("false");
+        }
+
+        if (aTrue || aTrue) {
+            System.out.println("true");//true
+        } else {
+            System.out.println("false");
+        }
+
+        if (aTrue || aFalse) {
+            System.out.println("true");//true
+        } else {
+            System.out.println("false");
+        }
+
+        if (aFalse || aTrue) {
+            System.out.println("true");//true
+        } else {
+            System.out.println("false");
+        }
+
+        if (aFalse || aFalse) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");//false
+        }
+
     }
 }
-

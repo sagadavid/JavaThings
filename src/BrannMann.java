@@ -10,4 +10,13 @@ public class BrannMann {
     public void ringBrannMan() {
         System.out.println("du ringer på " + brannNo);
     }
+
+    public static void main(String[] args)
+    {
+        Secretary Elisa = new Secretary();
+        Elisa.urgentCall();
+        Elisa.ringLastCall();
+        BrannMann Henrik = new BrannMann();
+        Henrik.ringBrannMan();
+    }
 }

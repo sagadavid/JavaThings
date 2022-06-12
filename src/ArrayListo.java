@@ -3,39 +3,45 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class ArrayListo {
+
     public static void main(String[] args) {
-//        create array list
-        java.util.ArrayList<String> nouns = new java.util.ArrayList();
-        System.out.println("nouns:null:  "+nouns);
-//        add element to arraylist (adds to last position)
-        nouns.add("table");
-//        add element at index (index should not create a null/hull)
-        nouns.add(1,"desk");
-        nouns.add("tv");
-//        get element at index
-        System.out.println(nouns.get(1));
-        System.out.println("nouns "+nouns);
-// copy to new
+//initialize array list
+        java.util.ArrayList<String> nounsArrList = new java.util.ArrayList();
+        System.out.println("nounsArrList are null: "+nounsArrList);//nounsArrList are null: []
+//add elements(adds to last position
+//add element at index (index should not create a null/hull)
+        nounsArrList.add("table");
+        nounsArrList.add(1,"desk");
+        nounsArrList.add("tv");
+////get element at index
+        System.out.println(nounsArrList.get(1));//desk
+        System.out.println(nounsArrList.toString());//[table, desk, tv]
+        System.out.println("nounsArrList "+nounsArrList);//nounsArrList [table, desk, tv]
+// copy to new Array List
         java.util.ArrayList<String> newNouns = new java.util.ArrayList<>();
-//       old list in paranthesis
-//    (not)-->    nouns.addAll(newNouns);
-        newNouns.addAll(nouns);
-        System.out.println("newnouns"+newNouns);
-//        addALl to the index !! position
+        newNouns.addAll(nounsArrList);
+        System.out.println("newnouns"+newNouns);//newnouns[table, desk, tv]
+//fore loop for list
+        for (int i = 0; i < newNouns.size(); i++) {
+            System.out.print(newNouns.get(i));//tabledesktvsubstan
+        }
+
         ArrayList<String> substan = new ArrayList<>();
         substan.add("window");
         substan.add("carriage");
         substan.add("logos");
-        System.out.println("substan "+substan);
-        substan.addAll(1,nouns);
-        System.out.println("substan "+substan);
-//        addAll, adds to end if index not specified
+        System.out.println("substan "+substan);//substan [window, carriage, logos]
+//addALl to the index !! position
+        substan.addAll(1,nounsArrList);
+        System.out.println("substan "+substan);//substan [window, table, desk, tv, carriage, logos]
+//addAll, adds to end if index not specified
         substan.addAll(substan);
-        System.out.println("double substan "+substan);
+        System.out.println("double substan "+substan);//substan [window, table, desk, tv, carriage, logos]
 // possible to add a Set also
         HashSet<String> hashSet= new HashSet<>();
         hashSet.add("okaliptus");
-        nouns.addAll(hashSet);
-        System.out.println("nouns+hashset "+nouns);
+        nounsArrList.addAll(hashSet);
+        System.out.println("nounsArrList+hashset "+nounsArrList);//nouns+hashset [table, desk, tv, okaliptus]
+
     }
 }
